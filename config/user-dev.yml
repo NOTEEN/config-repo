@@ -2,11 +2,23 @@ server:
   port: 8090
 spring: 
   application:  
-    name: user #指定服务名
+    name: user # 指定服务名
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8081/eureka/
+spring:
+  cloud:
+    bus:
+      refresh:
+        enabled: true
+  kafka:
+    bootstrap-servers: 112.74.63.201:9092
+management: 
+  endpoints: 
+    web: 
+      exposure: 
+        include: '*'
       
       
 name: 哈哈哈
